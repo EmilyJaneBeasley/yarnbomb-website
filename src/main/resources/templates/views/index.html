@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="fragments :: head"></head>
-<body>
+<body class="container">
+
     <h1 th:text="${title}">Default Title</h1>
+
     <nav th:replace="fragments :: navigation"></nav>
+
     <p th:text="${intro}"></p>
 
+    <h3 th:text="${signup}"></h3>
+    <a href="/signup">Create an Account Here!</a>
+
+
+
+
     <a href="#" class="fa fa-facebook"></a>
-    <a href="#" class="fa fa-instagram"></a>
+    <a href="#" class="fa fa-instagram"> </a>
+
 
 
 </body>
