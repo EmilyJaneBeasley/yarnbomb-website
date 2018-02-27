@@ -5,11 +5,12 @@
 
 <h1>User List</h1>
 <hr />
+<nav th:replace="fragments :: navigation"></nav>
 <p th:text="'Welcome, ' + ${user.username} + '!'"></p>
 
 <p th:each="user : ${users}" th:text="${user.username}"></p>
 
-<a href="/index">Home</a>
+
 
 </body>
 </html>
