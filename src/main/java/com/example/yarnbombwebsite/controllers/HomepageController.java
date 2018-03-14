@@ -14,7 +14,7 @@ public class HomepageController {
 
     @RequestMapping(value = "")
     public String index (Model model){
-        model.addAttribute("title", "RiverBend YarnBombers");
+        model.addAttribute("title", "RiverBend Yarn Bombers");
         model.addAttribute("intro","We help make yarn art happen in the RiverBend area");
         model.addAttribute("signup", "Don't have an account? Create one here to contribute " +
                 "to our blog and get email updates on upcoming events.");
