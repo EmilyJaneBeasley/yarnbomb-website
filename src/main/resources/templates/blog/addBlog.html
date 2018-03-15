@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+
+<h1 th:text="${title}">Default Title</h1>
+<hr />
+<nav th:replace="fragments :: navigation"></nav>
+<p>Add your blog posts here!</p>
+
+<form method="post">
+    <input type="text" name="addPost"/>
+    <input type="submit" value="Add Post" />
+</form>
+
+
+<ul>
+    <li th:each="post : ${posts}" th:text="${post}"></li>
+</ul>
+
+
+</body>
+</html>
