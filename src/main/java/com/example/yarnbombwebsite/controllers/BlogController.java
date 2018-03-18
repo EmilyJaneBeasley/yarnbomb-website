@@ -22,7 +22,7 @@ public class BlogController {
     @RequestMapping(value="addBlog", method = RequestMethod.POST)
     public String processAddBlogForm(@RequestParam String addPost){
         posts.add(addPost);
-        return "blog/addBlog";
+        return "blog/addBlog ";
     }
 
 

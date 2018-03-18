@@ -2,7 +2,8 @@ package com.example.yarnbombwebsite.controllers;
 
 
 import com.example.yarnbombwebsite.models.User;
-import com.example.yarnbombwebsite.models.UserData;
+import com.example.yarnbombwebsite.models.data.UserDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -15,6 +16,9 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping("user")
 public class UserController {
+    @Autowired
+    private UserDao userDao;
+
 
 
     @RequestMapping(value = "add", method = RequestMethod.GET)
@@ -46,7 +50,7 @@ public class UserController {
             return "user/add";
         }
         else {
-            UserData.add(user);
+            userDao.save(user);
             model.addAttribute(user);
             return "user/index";
 
